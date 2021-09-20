@@ -1,0 +1,31 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Método map</title>
+	</head>
+
+	<body>
+
+		<div id="elemento1" style="background-color:red">
+			Div
+		</div>
+
+		<script>
+
+			//map: cada elemento é passado para o método callback e o valor retornado do callback irá substituir o elemento do array.
+			
+			var money = [12.8, 15.9, 21.7, 35.2];
+			console.log("money:\n" + money);
+			var roundedMoney = money.map(roundOff, money);
+			console.log("roundedMoney:\n" + roundedMoney);
+			
+			function roundOff(value, position, array) {
+				return Math.round(value);
+			}
+
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,37 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Certificação HTML5</title>
+
+		<script>   
+
+			//eventos customizados
+
+			myEvent = new CustomEvent("anAction",
+				{
+					detail: {
+						description: "Descricao do evento customizado",
+						timeofevent: new Date(),
+						eventcode: 2
+					},
+					bubbles: true,
+					cancelable: true
+				}
+			);
+
+			document.addEventListener("anAction", customEventHandler);
+			document.dispatchEvent(myEvent);
+
+			function customEventHandler() {
+				alert(window.event.detail.timeofevent);
+				console.log(window.event.detail.description);
+			}
+
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

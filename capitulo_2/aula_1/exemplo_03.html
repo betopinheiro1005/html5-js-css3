@@ -1,0 +1,50 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+
+		<div id="elemento1" style="background-color:red">
+			Div
+		</div>
+
+		<script>
+
+			//condicional com elementos
+			
+			var canvas = document.getElementById("elemento1");
+			if (canvas.style.backgroundColor == 'green' || canvas.style.backgroundColor == 'yellow') {
+				console.log('A cor da DIV é verde ou amarelo');
+			}
+			else if (canvas.style.backgroundColor == 'red') {
+				console.log('A cor da DIV é vermelha');
+			}
+			
+			// condicional com switch
+			
+			switch (canvas.style.backgroundColor) {
+				case 'yellow':
+					alert('slow down');
+					break;
+				case 'green':
+					alert('proceed');
+					break;
+				case 'red':
+					alert('stop');
+					break;
+				default:
+					alert('unknown condition');
+				break;
+			}
+			
+			// operador ternário
+			canvas.style.backgroundColor == 'green' ? document.write('proceed') : document.write('stop');		
+
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Filter</title>
+	</head>
+
+	<body>
+
+		<div id="elemento1" style="background-color:red">
+			Div
+		</div>
+
+		<script>
+
+			//filter: método que filtra itens de uma array se o retorno do callback for VERDADEIRO e cria um novo array com o resultado
+			
+			var numbers = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+			console.log("numbers: " + numbers);
+			
+			var allEven = numbers.filter(evenNumberCheck, numbers);
+			console.log("allEven: " + allEven);
+			
+			//work with the even numbers....
+			function evenNumberCheck(value, index, array) {
+				return (value % 2) == 0;
+			}
+
+		</script>
+
+	</body>
+
+</html>

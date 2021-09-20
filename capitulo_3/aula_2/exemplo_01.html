@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<meta charset="utf-8" />
+		<title>Validação CEP</title>
+		
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			crossorigin="anonymous"></script>
+		<style>
+			body{
+				margin: 15px;
+			}
+		</style>	
+	</head>
+
+	<body>
+
+		<script type="text/javascript">    
+			function CheckString() {
+				try {
+					var s = $('#regExString').val();
+					// var regExpression = /^[A-Z,a-z]\d[A-Z,a-z][\s{1}]?\d[A-Z,a-z]\d/;
+					var regExpression = /^[0]+[1-9]+\d{3}[[-]{1}]?\d{3}$/;
+
+					if (regExpression.test(s))
+						alert("CEP válido!");
+					else alert("CEP inválido!");
+				} catch (e) {
+					alert(e.message);
+				}
+			}
+
+		</script>
+
+		<form>
+			<label>CEP: </label>
+			<input type="text" id="regExString" />
+			<button onclick="CheckString();">Evaluate</button>
+		</form>
+
+	</body>
+	
+</html>

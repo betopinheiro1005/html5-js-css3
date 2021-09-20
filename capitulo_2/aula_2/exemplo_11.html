@@ -1,0 +1,23 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Certificação HTML5</title>
+
+		<script>
+
+			window.onload = function () {
+				document.getElementById("firstNameText").addEventListener("keydown", function () {
+					document.getElementById("message").innerText = "Código do caractere pressionado: " + window.event.keyCode;
+				});			
+			}
+
+		</script>	
+	</head>
+	<body> 
+		<label for="firstNameText">First name: </label>
+		<input type="text" id="firstNameText" ><br /><br />
+		<div id="message"></div><br />
+	</body>
+
+</html>

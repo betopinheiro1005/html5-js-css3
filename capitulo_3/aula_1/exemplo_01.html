@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Validate Form HTML5</title>
+		
+		<style>
+			td {
+				margin: 5px;
+				padding: 5px;
+			}
+			#otherCommentsText{
+				padding: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<form method="post" action="dados.php">
+			<div>
+				<hgroup>
+					<h1>Customer Satisfaction is #1</h1>
+					<h2>Please take the time to fill out the following survey</h2>
+				</hgroup>
+			</div>
+			<table>
+				<tr>
+					<td>Your Secret Code: </td>
+					<td>
+						<input type="text" name="secretKey" readonly="readonly" value="00XY998BB" />
+					</td>
+				</tr>
+				<tr>
+					<td>Password: </td>
+					<td>
+						<input type="password" name="password" /> 
+					</td>
+				</tr>
+				<tr>
+					<td>First Name: </td>
+					<td>
+						<input type="text" name="firstName" minlength="3" maxlength="20" />
+					</td>
+				</tr>
+				<tr>
+					<td>Last Name: </td>
+					<td>
+						<input type="text" name="lastName" minlength="3" maxlength="20" />
+					</td>
+				</tr>
+				<tr>
+					<td>Your favorite website: </td>
+					<td>
+						<input type="url" name="favouriteWebsite" />
+					</td>
+				</tr>
+				<tr>
+					<td> Your age in years: </td>
+					<td>
+						<input type="number" name="age" />
+					</td>
+				</tr>
+				<tr>
+					<td> What colors have you colored your hair: </td>
+					<td>
+						<input type="checkbox" id="chkBrown" checked="checked" /> Brown
+						<input type="checkbox" id="chkBlonde" /> Blonde
+						<input type="checkbox" id="chkBlack" /> Black
+						<input type="checkbox" id="chkRed" /> Red
+						<input type="checkbox" id="chkNone" /> None
+					</td>
+				</tr>
+				<tr>
+					<td>Rate your experience: </td>
+					<td>
+						<input type="radio" id="chkOne" value="very_poor" name="experience" /> 1 - Very Poor
+						<input type="radio" id="chkTwo" value="poor" name="experience" /> 2 - Poor
+						<input type="radio" id="chkThree" value="medium" name="experience" /> 3 - Medium
+						<input type="radio" id="chkFour" value="good" name="experience" /> 4 - Good
+						<input type="radio" id="chkFive" value="very_good" name="experience" checked="checked" /> 5 - Very Good
+					</td>
+				</tr>
+				<tr>
+					<td>How likely would you recommend the product: </td>
+					<td>
+						<input type="range" min="1" max="25" name="recommend" value="20" />
+					</td>
+				</tr>
+				<tr>
+					<td> Other Comments: </td>
+					<td>
+						<textarea id="otherCommentsText" name="otherComments" rows="10" cols="30" spellcheck="true"></textarea> 
+					</td>
+				</tr>
+				<tr>
+					<td> Email address: </td>
+					<td>
+						<input type="email" name="email" placeholder="Digite seu e-mail" required/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<input type="submit" value="Submit" />
+						<input type="reset" value="Clear" />
+						<input type="button" value="Message" onClick="ChamarFuncaoAlerta()" /> </td>
+				</tr>
+				
+			</table>
+		</form>
+
+		<script>    
+		function ChamarFuncaoAlerta(){
+			alert('Chamei a função!');
+		}
+		</script>
+
+
+	</body>
+
+</html>

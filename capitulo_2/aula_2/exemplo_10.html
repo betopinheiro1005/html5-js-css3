@@ -1,0 +1,26 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Certificação HTML5</title>
+
+		<script>
+			window.onload = function () {
+				document.getElementById("firstNameText").focus();
+				document.getElementById("firstNameText").addEventListener("blur", function () {
+					if (this.value.length < 5) {
+						document.getElementById("ruleViolation").innerText = 'First Name is required with least 5 letters';
+						document.getElementById("ruleViolation").style.color = 'red';
+						this.focus();
+					}
+				}); 
+			}
+		</script>
+
+	</head>
+	<body> 
+		<input type="text" id="firstNameText" value=""><br /><br />
+		<div id="ruleViolation"></div><br />
+	</body>
+
+</html>

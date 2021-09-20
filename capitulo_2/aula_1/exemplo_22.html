@@ -1,0 +1,32 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+
+		<div id="elemento1" style="background-color:red">
+			Div
+		</div>
+
+		<script>
+
+			//Reduce e ReduceRight: Métodos recursivos. 
+			//O valor resultante do callback é passado de volta pro método que o chamou com o valor novo e antigo
+			
+			var numbers = [1, 2, 3, 4, 5];
+			console.log("numbers:\n" + numbers);
+			var factorials = numbers.reduce(factorial);
+			console.log("factorials:\n" + factorials);
+
+			function factorial(previous, current) {
+				return previous * current;
+			}
+
+		</script>
+
+	</body>
+
+</html>

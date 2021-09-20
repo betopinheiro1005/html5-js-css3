@@ -1,0 +1,70 @@
+<html>
+	<head>
+
+		<meta charset="utf-8" />
+		<title>jQuery com Ajax</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				
+				$("#searchButton").click(function(){
+				
+					var searchPath;
+				
+					switch ($("#searchFruit").val()) {
+						case "long":
+							searchPath = "Fruit/long.xml";
+							break;
+						case "round":
+							searchPath = "Fruit/round.xml";
+							break;
+						case "orange":
+							searchPath = "Fruit/orange.xml";
+							break;
+						default:
+							InvalidSearchTerm();
+					}
+					
+					$.ajax({
+						url: searchPath,
+						cache: false,
+						dataType: "xml",
+						success: function (data) {
+							$(data).find("fruit").each(
+								function () {
+									$("#searchResults").append($(this).text());
+									$("#searchResults").append("<br />");
+							})
+						},
+						error: function (xhr, textStatus, errorThrown) {
+							$("#searchResults").append(errorThrown);
+						}
+					});					
+					
+					
+				});
+				
+				function InvalidSearchTerm() {
+					$("#searchResults").html("");
+					$("#searchResults").text("Invalid Search Term. Please try again.");
+				}
+
+			});
+			
+			
+		</script>
+
+	</head>
+	<body>
+		<div>
+			Enter search term: <input type="text" id="searchFruit" />
+			<button id="searchButton">Search</button>
+		</div>
+		
+		<h1>Results:</h1>
+		
+		<div id="searchResults"></div>
+		
+	</body>
+</html>

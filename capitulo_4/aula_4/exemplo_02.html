@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform translate</title>
+    <style>
+      #div1 {
+        width: 200px;
+        height: 200px;
+        background-color: gray;
+        margin-left: 50px;
+        margin-top: 50px;
+        border: 1px solid black;
+      }
+      .teste {
+        transform: translate(200px, 200px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <p id="demo"></p>
+
+    <script>
+      var teste = document.getElementById('div1');
+      teste.addEventListener('click', function () {
+        // document.getElementById('demo').innerHTML = 'Hello World';
+        teste.classList.add('teste');
+      });
+    </script>
+  </body>
+</html>

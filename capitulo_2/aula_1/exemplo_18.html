@@ -1,0 +1,35 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+
+		<div id="elemento1" style="background-color:red">
+			Div
+		</div>
+
+		<script>
+
+			//some:  verifica se pelo menos um elemento do array satisfaz a condição fornecida. 
+			
+			var evenNumbers = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+			var leastOne = evenNumbers.some(evenNumberCheck, evenNumbers);
+
+			if (leastOne) {
+				console.log("Pelo menos um elemento do array é ímpar");
+			} else {
+				console.log("Todos os elementos do array são pares");
+			}
+
+			function evenNumberCheck(value, index, array) {
+				return (value % 2) == 1;
+			}
+
+		</script>
+
+	</body>
+
+</html>

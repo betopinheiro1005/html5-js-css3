@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<estados>
+    <estado>
+        <nomeEstado>São Paulo</nomeEstado>
+        <sigla>SP</sigla>
+    </estado>
+    <estado>
+        <nomeEstado>Minas Gerais</nomeEstado>
+        <sigla>MG</sigla>
+    </estado>
+    <estado>
+        <nomeEstado>Rio de Janeiro</nomeEstado>
+        <sigla>RJ</sigla>
+    </estado>
+</estados>

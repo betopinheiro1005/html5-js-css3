@@ -1,0 +1,28 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+
+		<div id="elemento1" style="background-color:red">
+			Div
+		</div>
+
+		<script>
+
+			//splice - método para trocar itens em uma array por novos items
+			
+			var sports7 = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+			console.log("sports7:\n" + sports7);
+			var splicedItems = sports7.splice(1, 3, 'golf', 'curling', 'darts');
+			console.log("splicedItems:\n" + splicedItems);
+			console.log("New sports7:\n" + sports7);
+			
+		</script>
+
+	</body>
+
+</html>

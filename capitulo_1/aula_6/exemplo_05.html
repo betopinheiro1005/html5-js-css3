@@ -1,0 +1,55 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+
+		<script>
+
+			function Book(){
+				//just creates an empty book.
+			}
+ 
+			function Book(title, length, author) {
+				this.title = title;
+				this.Length = length;
+				this.author = author;
+			}
+ 
+			Book.prototype = {
+				ISBN: "",
+				Length: -1,
+				genre: "",
+				covering: "",
+				author: new Author(),
+				currentPage: 0, 
+				title: ""
+			}
+
+			function Author(){
+			}
+
+			function Author(firstName, lastName, gender){
+				this.firstName = firstName;
+				this.lastName = lastName;
+				this.gender = gender;
+			}
+
+			Author.prototype = {
+				firstName:"",
+				lastName:"",
+				gender:"",
+				BookCount: 0
+			}
+
+			var books = new Array(new Book(), new Book("First Edition",350, new Author("Roberto","Pinheiro","M")) );
+ 			console.log(books);
+
+		</script>
+
+	</body>
+
+</html>

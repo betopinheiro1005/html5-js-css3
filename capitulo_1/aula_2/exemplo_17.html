@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Certificação HTML5</title>
+		<style>
+			canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h1>Canvas</h1>
+		<canvas id="drawingSurface" width="600" height="400">Your browser does not support HTML5.</canvas>
+
+	</body>
+
+	<script>        
+		window.onload = function () {
+			var drawingSurface = document.getElementById("drawingSurface");
+			var ctxt = drawingSurface.getContext("2d");
+
+			ctxt.lineWidth = 5;
+			ctxt.strokeStyle = '#0f0';
+
+			ctxt.beginPath();
+			ctxt.moveTo(10,380);
+			ctxt.quadraticCurveTo(300,-250,580,380);
+			ctxt.lineWidth = 25;
+			ctxt.strokeStyle = '#f00';
+			ctxt.stroke();
+		}    
+	</script>
+
+</html>

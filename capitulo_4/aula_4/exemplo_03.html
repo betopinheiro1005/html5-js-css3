@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - @media</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      @media screen and (min-width: 1200px) {
+        #blogPage {
+          display: grid;
+          grid-columns: 15% 1fr 25%;
+          grid-rows: (20%) [5];
+          width: 90%;
+          height: 95%;
+          border: 1px dotted black;
+          margin: auto;
+        }
+        #blogPage > header {
+          grid-column: 1 / span 3;
+          grid-row: 1;
+          border: 1px dotted black;
+        }
+        #blogPage > footer {
+          grid-column: 1 / span 3;
+          grid-row: 5;
+          border: 1px dotted black;
+        }
+        #blogPage > article {
+          grid-column: 2;
+          grid-row: 2 / span 3;
+          border: 1px dotted black;
+        }
+        #blogPage > #calendar {
+          grid-column: 3;
+          grid-row: 3;
+          border: 1px dotted black;
+        }
+        #blogPage > #blogRoll {
+          grid-column: 3;
+          grid-row: 4;
+          border: 1px dotted black;
+        }
+        #blogPage > #aboutMe {
+          grid-column: 1;
+          grid-row: 2 / span 3;
+          border: 1px dotted black;
+        }
+        #blogPage > #bloghistory {
+          grid-column: 3;
+          grid-row: 2;
+          border: 1px dotted black;
+        }
+      }
+
+      @media screen and (max-width: 1199px) and (min-width: 401px) {
+        #blogPage {
+          display: grid;
+          grid-columns: 75% 1fr;
+          grid-rows: (20%) [6];
+          width: 90%;
+          height: 95%;
+          border: 1px dotted black;
+          margin: auto;
+        }
+        #blogPage > header {
+          grid-column: 1 / span 2;
+          grid-row: 1;
+          border: 1px dotted black;
+        }
+        #blogPage > footer {
+          grid-column: 1 / span 2;
+          grid-row: 6;
+          border: 1px dotted black;
+        }
+        #blogPage > article {
+          grid-column: 1;
+          grid-row: 3 / span 3;
+          border: 1px dotted black;
+        }
+        #blogPage > #calendar {
+          grid-column: 2;
+          grid-row: 4;
+          border: 1px dotted black;
+        }
+        #blogPage > #blogRoll {
+          grid-column: 2;
+          grid-row: 5;
+          border: 1px dotted black;
+        }
+        #blogPage > #aboutMe {
+          grid-column: 1 / span 2;
+          grid-row: 2;
+          border: 1px dotted black;
+        }
+        #blogPage > #bloghistory {
+          grid-column: 2;
+          grid-row: 3;
+          border: 1px dotted black;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        #blogPage {
+          display: grid;
+          grid-columns: 50% 50%;
+          grid-rows: 15% 15% 1fr 15% 15%;
+          width: 90%;
+          height: 95%;
+          border: 1px dotted black;
+          margin: auto;
+        }
+        #blogPage > header {
+          grid-column: 1 / span 2;
+          grid-row: 1;
+          border: 1px dotted black;
+        }
+        #blogPage > footer {
+          grid-column: 1 / span 2;
+          grid-row: 5;
+          border: 1px dotted black;
+        }
+        #blogPage > article {
+          grid-column: 1 / span 2;
+          grid-row: 3;
+          border: 1px dotted black;
+        }
+        #blogPage > #calendar {
+          grid-column: 2;
+          grid-row: 2;
+          border: 1px dotted black;
+        }
+        #blogPage > #blogRoll {
+          grid-column: 1;
+          grid-row: 4;
+          border: 1px dotted black;
+        }
+        #blogPage > #aboutMe {
+          grid-column: 1;
+          grid-row: 2;
+          border: 1px dotted black;
+        }
+        #blogPage > #bloghistory {
+          grid-column: 2;
+          grid-row: 4;
+          border: 1px dotted black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="blogPage">
+      <header>My Blog Header</header>
+      <article>My Blog's Main Body</article>
+      <footer>My Blog Footer</footer>
+      <aside id="calendar">A calendar</aside>
+      <aside id="blogRoll">My favorite blogs</aside>
+      <aside id="aboutMe">Who am I?</aside>
+      <aside id="bloghistory">My blog history</aside>
+    </div>
+  </body>
+</html>

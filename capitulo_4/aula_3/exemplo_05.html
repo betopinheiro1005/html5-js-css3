@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - flexbox</title>
+    <style>
+      #flexbox1 {
+        display: flex;
+        border: 1px solid black;
+        margin-top: 100px;
+        min-height: 15px;
+      }
+      #flexbox1 > div {
+        min-width: 80px;
+        min-height: 80px;
+        border: 1px solid black;
+        margin: 5px;
+      }
+      #flexbox1 > div:nth-child(1) {
+        background-color: green;
+        order: 2;
+      }
+      #flexbox1 > div:nth-child(2) {
+        background-color: yellow;
+        order: 1;
+      }
+      #flexbox1 > div:nth-child(3) {
+        background-color: red;
+        order: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="flexbox1">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

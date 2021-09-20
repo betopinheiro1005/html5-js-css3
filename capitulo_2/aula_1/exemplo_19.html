@@ -1,0 +1,30 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+
+		<ul id="sportsList"></ul>
+
+		<script>
+
+			//foreach: processa lógica em cada elemento do array/coleção
+			
+			var sportsArray = ['soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby'];
+			sportsArray.forEach(offerSport);
+
+			function offerSport(value, index, array) {
+				var sportsList = document.getElementById("sportsList");
+				var bullet = document.createElement("li");
+				bullet.innerText = value;
+				sportsList.appendChild(bullet);
+			}
+
+		</script>
+
+	</body>
+
+</html>

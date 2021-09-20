@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista>
+    <fruit>
+        <nome>orange</nome>
+    </fruit>
+    <fruit>
+        <nome>apple</nome>
+    </fruit>
+    <fruit>
+        <nome>pineapple</nome>
+    </fruit>
+    <fruit>
+        <nome>banana</nome>
+    </fruit>
+</lista>

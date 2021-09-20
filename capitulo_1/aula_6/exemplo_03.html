@@ -1,0 +1,43 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+
+		<script>
+
+			//criando objetos customizados
+			var book = {
+				ISBN: "55555555",
+				Length: 560,
+				genre: "programming",
+				covering: "soft",
+				author: "John Doe",
+				currentPage: 5,
+				title: "My Big Book of Wonderful Things",
+				flipTo: function flipToAPage(pNum) {
+					this.currentPage = pNum;
+					console.log("Fui pra pagina: " + this.currentPage);
+				},
+
+				turnPageForward: function turnForward() {
+					this.flipTo(this.currentPage+1);
+				},
+ 
+				turnPageBackward: function turnBackward() {
+					this.flipTo(this.currentPage-1);
+				}				
+			}        
+
+			book.flipTo(15);  // Vai para a página 15
+			book.turnPageForward();  // Avança para a página 16
+			book.flipTo(37);  // Vai para a página 37
+			book.turnPageBackward();  // Retrocede para a página 36
+		</script>
+
+	</body>
+
+</html>

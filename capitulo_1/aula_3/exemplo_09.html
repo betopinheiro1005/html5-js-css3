@@ -1,0 +1,62 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		<style>
+			#innerDiv{
+				visibility: collapse;
+			}
+			table{
+				border-collapse: collapse;
+				margin-bottom: 10px;
+			}
+			td{
+				padding: 5px;
+			}
+		</style>
+		<script>
+			window.onload = function () { 
+				document.getElementById("btnHideAnElement").onclick = function () { 
+					if (document.getElementById("innerDiv").style.visibility == 'visible') {
+						document.getElementById("innerDiv").style.visibility = 'collapse';
+						btnHideAnElement.innerText = "Exibir tabela";
+					} else {
+						document.getElementById("innerDiv").style.visibility = 'visible';
+						btnHideAnElement.innerText = "Ocultar tabela";
+					}
+				} 
+			}
+		</script>
+	</head>	
+	<body>
+		<form>
+			<div id="innerDiv">
+				<table border="1">
+					<tr>
+						<td>Linha 1</td>
+						<td>Texto da linha 1</td>
+					</tr>
+					<tr>
+						<td>Linha 2</td>
+						<td>Texto da linha 2</td>
+					</tr>
+					<tr>
+						<td>Linha 3</td>
+						<td>Texto da linha 3</td>
+					</tr>
+					<tr>
+						<td>Linha 4</td>
+						<td>Texto da linha 4</td>
+					</tr>
+					<tr>
+						<td>Linha 5</td>
+						<td>Texto da linha 5</td>
+					</tr>
+				</table>
+			</div>
+
+			<button type="button" id="btnHideAnElement">Exibir tabela</button>
+
+		</form>
+	</body>
+</html>

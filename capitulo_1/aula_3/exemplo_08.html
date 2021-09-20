@@ -1,0 +1,33 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		<style>
+			#innerDiv{
+				visibility: hidden;
+			}
+		</style>
+		<script>
+			window.onload = function () { 
+				document.getElementById("btnHideAnElement").onclick = function () { 
+					if (document.getElementById("innerDiv").style.visibility == 'visible') {
+						document.getElementById("innerDiv").style.visibility = 'hidden';
+						btnHideAnElement.innerText = "Exibir texto";
+					} else {
+						document.getElementById("innerDiv").style.visibility = 'visible';
+						btnHideAnElement.innerText = "Ocultar texto";
+					}
+				} 
+			}
+		</script>
+	</head>	
+	<body>
+		<form>
+			<div id="innerDiv">
+				<p>Hello World!</p>
+			</div>
+			
+			<button type="button" id="btnHideAnElement">Exibir texto</button>
+		</form>
+	</body>
+</html>

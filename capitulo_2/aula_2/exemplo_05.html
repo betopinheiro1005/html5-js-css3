@@ -1,0 +1,30 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Certificação HTML5</title>
+
+		<script>   
+
+			//chamando funcoes com addEventListener e removeEventListener
+			
+			window.addEventListener("load", onloadHandlerListener, false);
+			window.addEventListener("load", onloadHandlerListener2, false);
+
+			function onloadHandlerListener() {
+				alert("hello event 1.");
+			}
+
+			function onloadHandlerListener2() {
+				alert("hello event 2.");
+			}
+
+			window.removeEventListener("load", onloadHandlerListener2, false);
+
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

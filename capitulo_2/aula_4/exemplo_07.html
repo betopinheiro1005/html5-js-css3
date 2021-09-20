@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<style>
+		
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				display: inline-block;
+				margin-right: 5px;
+			}
+		
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<script>
+
+			$("document").ready(
+				function () {
+					$('#floorDiv').click(function () {
+						$("div").each(function () { 
+							$(this).css("background-color", "red"); 
+						});
+					})
+				}
+			);		
+		
+		</script>
+	</head>
+	<body>
+
+		<div id="floorDiv"></div>
+		<div id="div2"></div>
+		<div id="div3"></div>
+		<div id="div4"></div>
+
+	</body>
+</html>
