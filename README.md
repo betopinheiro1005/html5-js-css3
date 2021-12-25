@@ -1,7 +1,8 @@
 # Certificação 70-480 - HTML5, JS e CSS3
 ## Guia de estudos - Ray Carneiro
-### Link dos vídeos
-<https://www.youtube.com/watch?v=vmJ896cWXCQ&list=PLwftZeDnOzt1Bbkn0Ue87GsYAe4TcUSSI>
+
+### [Vídeos das aulas](https://www.youtube.com/watch?v=vmJ896cWXCQ&list=PLwftZeDnOzt1Bbkn0Ue87GsYAe4TcUSSI)
+
 ### Lista de aulas
 
 CAPÍTULO 1 - ESTRUTURAS DE DOCUMENTOS HTML5  
